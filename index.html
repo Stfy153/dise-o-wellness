@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellness - Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding-top: 100px;
+    }
+    .navbar {
+      background-color: #f8bbd0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .nav-link, .navbar-brand {
+      color: #880e4f !important;
+      font-weight: bold;
+    }
+    .hero {
+      background: linear-gradient(to right, #f8bbd0, #ffe4e1);
+      padding: 100px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+    .hero-text {
+      max-width: 50%;
+      text-align: left;
+      color: #880e4f;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+    .hero-video {
+      max-width: 45%;
+    }
+    .hero-video video {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .section-title {
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      color: #ad1457;
+    }
+    .course-card {
+      background-color: #fff0f5;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #880e4f;
+    }
+    .content-section img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .course-card h5 {
+      color: #c2185b;
+      font-weight: bold;
+    }
+    .progress {
+      height: 20px;
+      background-color: #fce4ec;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    .progress-bar {
+      background-color: #ec407a;
+    }
+    footer {
+      background-color: #f8bbd0;
+      padding: 20px;
+      text-align: center;
+      color: #880e4f;
+    }
+    .search-box {
+      max-width: 300px;
+    }
+    .disabled-link {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .navbar-logo {
+      max-height: 40px;
+    }
+    .card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .card h5 {
+    font-weight: bold;
+  }
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .companeros-section {
+    background-color: #fff5f9;
+  }
+  .companeros-section .card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+  }
+
+
+
+</style>
+
+
+
+  
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <!-- Logo de la página -->
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="wellness logo.png" alt="Wellness Logo" class="navbar-logo me-2">
+   
+      </a>
+      <form class="d-flex me-3 search-box">
+        <input class="form-control" type="search" id="searchInput" placeholder="Buscar...">
+      </form>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+         
+      
+          <li class="nav-item"><a class="nav-link" href="registro.html">Registrarse</a></li>
+        </ul>
+        <a href="login.html" id="nav-login" class="btn btn-outline-primary">Iniciar sesión</a>
+        <button onclick="cerrarSesion()" id="nav-logout" class="btn btn-outline-danger" style="display: none;">Cerrar sesión</button>
+        <span id="usuario-nombre" class="ms-3 fw-bold text-dark"></span>
+
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="hero-text">
+        <h1><i class="fas fa-heart me-2"></i> Wellness</h1>
+        <p>Explora, aprende y cuida de ti. Tu bienestar es nuestra prioridad.</p>
+      </div>
+      <div class="hero-video">
+        <video src="Salud Sexual .mp4" autoplay muted loop></video>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center text-danger mb-5">¿Te has preguntado...?</h2>
+  
+      <div class="row g-4">
+        <!-- Pregunta Curso 1 -->
+        <div class="col-md-4">
+          <div class="card p-4 h-100 shadow-sm">
+            <h5 class="text-primary">¿Qué es el consentimiento sexual?</h5>
+            <p class="small text-muted">Descubre cómo se define, por qué es importante y cómo identificarlo en cualquier relación.</p>
+            <a href="curso1.html" class="btn btn-outline-danger mt-auto w-100">Ir a resolver en Curso 1</a>
+          </div>
+        </div>
+  
+        <!-- Pregunta Curso 3 -->
+        <div class="col-md-4">
+          <div class="card p-4 h-100 shadow-sm">
+            <h5 class="text-primary">¿Qué método anticonceptivo es el adecuado para mí?</h5>
+            <p class="small text-muted">Conoce los diferentes métodos y cuál se adapta mejor a tus necesidades.</p>
+            <a href="curso3.html" class="btn btn-outline-danger mt-auto w-100">Ir a resolver en Curso 3</a>
+          </div>
+        </div>
+  
+        <!-- Pregunta Curso 5 -->
+        <div class="col-md-4">
+          <div class="card p-4 h-100 shadow-sm">
+            <h5 class="text-primary">¿Por qué es importante la salud reproductiva en adolescentes?</h5>
+            <p class="small text-muted">Entérate cómo influye en tu bienestar físico, emocional y futuro.</p>
+            <a href="curso5.html" class="btn btn-outline-danger mt-auto w-100">Ir a resolver en Curso 5</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="cursos" class="py-5" style="
+  background-image: url('fondo.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+">
+  <div class="container">
+    <h2 class="text-center text-danger mb-4">Nuestros Cursos</h2>
+    <div class="row g-4">
+      <!-- Curso 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm" style="background-color: rgba(255, 255, 255, 0.95);">
+          <img src="salud sexusa.png" class="card-img-top" alt="Curso 1">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Introducción a la Salud Sexual</h5>
+            <p class="card-text">Conoce las bases del respeto, el cuidado del cuerpo, el consentimiento y la identidad sexual.</p>
+            <a href="curso1.html" class="btn btn-outline-danger w-100">Ver curso</a>
+          </div>
+        </div>
+      </div>
+      <!-- Curso 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm" style="background-color: rgba(255, 255, 255, 0.95);">
+          <img src="doctora (1).png" class="card-img-top" alt="Curso 2">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Enfermedades de Transmisión Sexual (ETS)</h5>
+            <p class="card-text">Aprende a prevenir, identificar y tratar las ETS con información científica y clara.</p>
+            <a href="curso2.html" class="btn btn-outline-danger w-100">Ver curso</a>
+          </div>
+        </div>
+      </div>
+      <!-- Curso 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm" style="background-color: rgba(255, 255, 255, 0.95);">
+          <img src="anticonceptivos.png" class="card-img-top" alt="Curso 3">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Métodos Anticonceptivos</h5>
+            <p class="card-text">Explora los distintos métodos de protección, su uso correcto y cómo elegir el más adecuado.</p>
+            <a href="curso3.html" class="btn btn-outline-danger w-100">Ver curso</a>
+          </div>
+        </div>
+      </div>
+      <!-- Curso 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm" style="background-color: rgba(255, 255, 255, 0.95);">
+          <img src="placer y sexualidad.png" class="card-img-top" alt="Curso 4">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Placer y Sexualidad</h5>
+            <p class="card-text">Hablemos del placer de manera libre, sana y respetuosa. Aprende a conocerte sin prejuicios.</p>
+            <a href="curso4.html" class="btn btn-outline-danger w-100">Ver curso</a>
+          </div>
+        </div>
+      </div>
+      <!-- Curso 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm" style="background-color: rgba(255, 255, 255, 0.95);">
+          <img src="derechos reproductivos.png" class="card-img-top" alt="Curso 5">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Salud Reproductiva</h5>
+            <p class="card-text">Todo lo que necesitas saber sobre embarazo, fertilidad, planificación y derechos reproductivos.</p>
+            <a href="curso5.html" class="btn btn-outline-danger w-100">Ver curso</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <section class="companeros-section py-5">
+    <div class="container text-center">
+      <h2 class="section-title">Conoce a tu compañera de aprendizaje</h2>
+      <p class="mb-4 text-muted">Ella estará contigo en cada curso para ayudarte, motivarte y enseñarte sobre salud sexual.</p>
+  
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card p-4 shadow h-100 border-0" style="border-radius: 25px;">
+            <img src="personaje.png" alt="Mia, tu guía" class="img-fluid rounded-circle mx-auto mb-4" style="max-width: 220px;">
+            <h4 class="fw-bold text-danger">Rachel</h4>
+            <p class="lead">Te acompaña a lo largo del camino para motivarte y cuidarte.</p>
+            <blockquote class="blockquote mt-4">
+              <p id="fraseMia" class="fst-italic text-secondary">"Recuerda: tu cuerpo merece respeto y amor cada día."</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 Wellness. Todos los derechos reservados.</p>
+    <div>
+      <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script>
+  
+
+    // Función de búsqueda de cursos
+    document.getElementById('searchInput').addEventListener('input', function() {
+      const term = this.value.toLowerCase();
+      const cards = document.querySelectorAll('.course-card');
+      cards.forEach(card => {
+        card.style.display = card.textContent.toLowerCase().includes(term) ? 'block' : 'none';
+      });
+    });
+
+   
+  const frasesMia = [
+    "Cada paso que das por tu bienestar es un acto de amor propio.",
+    "Explorar, aprender y cuidarte es tu derecho.",
+    "Tu cuerpo, tu decisión, tu poder.",
+    "La información te da libertad. ¡Sigue aprendiendo!",
+    "Lo que sabes hoy puede protegerte mañana."
+  ];
+
+  function mostrarFraseAleatoria() {
+    const frase = frasesMia[Math.floor(Math.random() * frasesMia.length)];
+    document.getElementById("fraseMia").textContent = `"${frase}"`;
+  }
+
+  window.addEventListener('DOMContentLoaded', mostrarFraseAleatoria);
+
+
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const logueado = localStorage.getItem('logueado') === 'true';
+    const navLogin = document.getElementById('nav-login');
+    const navLogout = document.getElementById('nav-logout');
+
+    if (logueado) {
+      navLogin.style.display = 'none';
+      navLogout.style.display = 'inline-block';
+    } else {
+      navLogin.style.display = 'inline-block';
+      navLogout.style.display = 'none';
+    }
+  });
+
+  function cerrarSesion() {
+    localStorage.removeItem('logueado');
+    localStorage.removeItem('usuarioActual');
+    window.location.href = 'login.html';
+  }
+
+
+
+  // Control de sesión
+  function verificarSesion() {
+    const loggedIn = localStorage.getItem('loggedIn') === 'true';
+    const nav = document.querySelector('.navbar-nav');
+
+    if (loggedIn) {
+      const cerrarSesionBtn = document.createElement('li');
+      cerrarSesionBtn.className = 'nav-item';
+      cerrarSesionBtn.innerHTML = `<a class="nav-link" href="#" onclick="cerrarSesion()">Cerrar sesión</a>`;
+      nav.innerHTML = `
+        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+      `;
+      nav.appendChild(cerrarSesionBtn);
+    } else {
+      nav.innerHTML = `
+        <li class="nav-item"><a class="nav-link" href="registro.html">Registrarse</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Iniciar sesión</a></li>
+      `;
+    }
+  }
+ 
+  document.addEventListener('DOMContentLoaded', () => {
+    const logueado = localStorage.getItem('logueado') === 'true';
+    const navLogin = document.getElementById('nav-login');
+    const navLogout = document.getElementById('nav-logout');
+    const usuarioNombre = document.getElementById('usuario-nombre');
+
+    if (logueado) {
+      const usuario = JSON.parse(localStorage.getItem('usuarioActual'));
+      navLogin.style.display = 'none';
+      navLogout.style.display = 'inline-block';
+      usuarioNombre.textContent = `Hola, ${usuario.nombre}`;
+    } else {
+      navLogin.style.display = 'inline-block';
+      navLogout.style.display = 'none';
+      usuarioNombre.textContent = '';
+    }
+  });
+
+  function cerrarSesion() {
+    localStorage.removeItem('logueado');
+    localStorage.removeItem('usuarioActual');
+    window.location.href = 'login.html';
+  }
+
+
+  function cerrarSesion() {
+    localStorage.removeItem('user');
+    localStorage.setItem('loggedIn', 'false');
+    location.reload();
+  }
+
+  // Eventos
+  window.addEventListener('DOMContentLoaded', () => {
+    mostrarFraseAleatoria();
+    verificarSesion();
+  });
+
+  // Búsqueda
+  document.getElementById('searchInput').addEventListener('input', function() {
+    const term = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.course-card');
+    cards.forEach(card => {
+      card.style.display = card.textContent.toLowerCase().includes(term) ? 'block' : 'none';
+    });
+  });
+
+
+
+  </script>
+</body>
+</html>
